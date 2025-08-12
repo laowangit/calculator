@@ -28,8 +28,8 @@
                             <option value="">-- 请选择交易品种类型 --</option>
                             <option value="indirect">间接报价xxxUSD（如EURUSD）</option>
                             <option value="direct">直接报价USDxxx（如USDJPY）</option>
-                            <option value="indirect_cross">间接报价交叉盘（如EURJPY）</option>
-                            <option value="direct_cross">直接报价交叉盘（如JPYCAD）</option>
+                            <option value="indirect_cross">间接报价交叉盘（如EURGBP）</option>
+                            <option value="direct_cross">直接报价交叉盘（如EURJPY）</option>
                             <option value="gold">黄金（XAU/USD）</option>
                             <option value="silver">白银（XAG/USD）</option>
                             <option value="oil">原油</option>
@@ -45,7 +45,7 @@
                             <div class="form-group">
                                 <label for="entryPrice">开仓价 *</label>
                                 <div class="input-group">
-                                    <input type="number" class="form-control" id="entryPrice" step="0.0001" placeholder="输入开仓价" required>
+                                    <input type="number" class="form-control" id="entryPrice" step="0.00001" placeholder="输入开仓价" required>
                                     <span class="input-group-text">USD</span>
                                 </div>
                             </div>
@@ -54,7 +54,7 @@
                             <div class="form-group">
                                 <label for="stopLoss">止损价 *</label>
                                 <div class="input-group">
-                                    <input type="number" class="form-control" id="stopLoss" step="0.0001" placeholder="输入止损价" required>
+                                    <input type="number" class="form-control" id="stopLoss" step="0.00001" placeholder="输入止损价" required>
                                     <span class="input-group-text">USD</span>
                                 </div>
                             </div>
@@ -85,7 +85,7 @@
                     <div id="crossRateField" class="form-group hidden">
                         <label for="crossRate">交叉盘汇率 *</label>
                         <div class="input-group">
-                            <input type="number" class="form-control" id="crossRate" step="0.0001" placeholder="输入交叉盘汇率">
+                            <input type="number" class="form-control" id="crossRate" step="0.00001" placeholder="输入交叉盘汇率">
                             <span class="input-group-text">USD</span>
                         </div>
                     </div>
@@ -101,7 +101,7 @@
                     <div id="marginRateField" class="form-group hidden">
                         <label for="marginRate">预付款货币汇率 *</label>
                         <div class="input-group">
-                            <input type="number" class="form-control" id="marginRate" step="0.0001" placeholder="输入预付款货币汇率">
+                            <input type="number" class="form-control" id="marginRate" step="0.00001" placeholder="输入预付款货币汇率">
                             <span class="input-group-text">USD</span>
                         </div>
                     </div>
@@ -122,7 +122,7 @@
                     <ul>
                         <li><strong>间接报价（如EURUSD）</strong> - 表示基础货币是其他货币，报价货币为美元</li>
                         <li><strong>直接报价（如USDJPY）</strong> - 表示基础货币是美元，报价货币为其他货币</li>
-                        <li><strong>交叉盘</strong> - 涉及两种非美元货币的交易对，需要提供交叉盘汇率</li>
+                        <li><strong>交叉盘</strong> - 涉及两种非美元货币的交易对，需要提供交叉盘汇率(报价货币与美元之间的汇率)</li>
                         <li><strong>贵金属（黄金/白银）</strong> - 以美元计价的贵金属交易</li>
                         <li><strong>指数交易</strong> - 包括原油、美元指数、德指、日经和恒指等品种</li>
                     </ul>
@@ -236,4 +236,5 @@
         });
     </script>
 </body>
+
 </html>
